@@ -40,6 +40,7 @@ function resetStoreVM(store, state) {
 
 function enableStrictMode(store) {
   store._vm.$watch(function () {
+    // store._vm.state
     return this.state;
   }, () => {
     if (process.env.NODE_ENV !== 'production') {
